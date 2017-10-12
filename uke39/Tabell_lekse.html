@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Champions League</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">
+    <style>
+        html{
+            font-size: 16px;
+        }
+        body{
+            font-family: 'Roboto', sans-serif;
+            color: #222;
+            font-weight: 300;
+        }
+        main{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 12px;
+        }
+
+        @media (max-width: 1200px){
+            main {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 850px){
+            main{
+                grid-template-columns: 1fr;
+            }
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        thead{
+            background-color: darkgray;
+            border-top: 4px solid green;
+            text-transform: uppercase;
+            font-size: .875rem;
+        }
+        tbody tr:nth-child(even){
+            /* anver farge er mørkere*/
+            background-color: #f9f9f9;
+        }
+        th, td{
+            text-align: left;
+            padding: .5rem .625rem;
+            border-right: 1px solid darkgray;
+        }
+        th:last-child, td:last-child{
+            border: none;
+        }
+        tr{
+            border-bottom: 1px solid darkgray;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav> Her ligger oversikt over Topp 10 Norway.</nav>
+</header>
+
+<main>
+
+    <article><h1>Norway</h1></article>
+
+    <article><h1>Topp 10 </h1>
+        <table><img src="Spotify_logo_with_text.png" width="300" height="100"  </table>
+        <table>
+
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Artist</th>
+                <th>Titel</th>
+                <th>Daily plays</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Post Malone og 21 Savage</td>
+                <td>Rockstar</td>
+                <td>242,600</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Kygo og Justin Jesso</td>
+                <td>Stargazing</td>
+                <td>151,005</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Masshmello og Khalid</td>
+                <td>Silence</td>
+                <td>143,263</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Zayn og Sia</td>
+                <td>Dusk Till Down</td>
+                <td>137,454</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Astrid S</td>
+                <td>Think before I Talk </td>
+                <td>94,073</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Alan Walker</td>
+                <td>The Spectre</td>
+                <td>93,514</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Logic, Alessia Cara og Khalid </td>
+                <td>1-800-273-8255</td>
+                <td>75,880</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Dua Lipa</td>
+                <td>New Rules</td>
+                <td>74,559</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Sam Smith</td>
+                <td>Too Good At Goodbyes</td>
+                <td>71,395</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Avicii og Sandro Cavazza</td>
+                <td>Without You (feat. Sandro Cavazzo)</td>
+                <td>67,872</td>
+            </tr>
+            </tbody>
+        </table>
+    </article>
+
+</main>
+</body>
