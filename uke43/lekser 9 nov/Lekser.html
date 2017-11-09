@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Lekser</title>
+    <head>
+        <style>
+            .dropbtn {
+                background-color: silver;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                display: grid;
+                grid-gap: 40px;
+                text-align: center;
+                grid-auto-flow: column;
+
+
+
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                grid-auto-flow: column;
+                display: grid;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: dimgrey;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 20px 400px;
+                text-decoration: none;
+                display: block;
+                border: solid black 1px;
+
+            }
+
+            .dropdown-content a:hover {background-color: #222222}
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: #f9f9f9;
+            }
+            a:hover {
+                color: #f9f9f9;
+            }
+            body {
+                background-image: url(logos.png);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+
+
+            }
+            body {
+                text-align: center;
+                grid-auto-flow: column;
+                display: grid;
+                grid-gap: 200px;
+                padding: 200px;
+
+            }
+        </style>
+
+    </head>
+</head>
+<body>
+<div class="dropdown">
+    <button class="dropbtn">Oppgaver</button>
+    <div class="dropdown-content"  >
+        <a href="s.152.html">Oppgave side 152</a>
+        <a href="s.159.html">Oppgave side 159</a>
+        <a href="David%20Byrne.html">Eliminating the human</a>
+        <a href="24%20timer.html">24 timer uten</a>
+    </div>
+</div>
+</body>
+</html>
