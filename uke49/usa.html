@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="no" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Burgeren</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellefair|Cinzel|Fondamento|Philosopher|Playfair+Display+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+
+            font-size: 16px;
+            background-color: #222222;
+            font-family: 'Anton', sans-serif;
+
+
+
+        }
+        header {
+            height: 32px;
+            background-color: black;
+        }
+        main {
+            max-width: 970px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #222222;
+        }
+
+
+        #cb {
+            display: none;
+        }
+
+
+        #burger {
+            display: flex;
+            width: 16px;
+            height: 16px;
+            flex-direction: column;  /*bortover*/
+            justify-content: space-between;
+            cursor: pointer;
+            position: absolute;
+            left: 8px;
+            top: 8px;
+
+        }
+        #burger > div {
+            background-color: white;
+            height: 2px;
+            transition: 0.5s;
+        }
+
+        #menu {
+            width: 200px;
+            background-color: white;
+            position: absolute;
+            top: 33px;
+            left: -200px;
+            min-height: calc(100vh - 33x);
+            transition: 0.8s;
+            text-align: center;
+            padding-top: 40px;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        #menu > a {
+            display: block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: black;
+        }
+        #menu > a:hover {
+            color: white;
+        }
+        .join {
+            background-color: silver;
+            width: 100px;
+            margin: auto;
+            padding: 5px;
+        }
+
+        #cb:checked ~ #menu {
+            left: 0;
+        }
+        #cb:checked ~ #burger > div:first-child {
+            transform: translateY(7px) rotate(45deg);
+        }
+        #cb:checked ~ #burger > div:nth-child(2) {
+            opacity: 0;
+        }
+        #cb:checked ~ #burger > div:last-child {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        section {
+            color: snow;
+            text-shadow: 4px 4px 4px black;
+            text-transform: uppercase;
+
+        }
+        * {box-sizing: border-box;}
+
+
+
+        .wrapper {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 10px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+
+        }
+
+        .wrapper > div {
+            border: 2px solid black(233,171,88);
+            border-radius: 5px;
+            background-color: rgba(233, 171, 88, .5);
+            padding: 1em;
+            color: black;
+            background-color: white;
+        }
+
+
+
+
+        h1{
+            text-align: center;
+            font-size: 48px;
+            margin-top: 10px;
+            font-family: 'Fondamento', cursive;
+
+
+
+
+        }
+        h2{
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Fondamento', cursive;
+
+        }
+        h3{
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Playfair Display SC', serif;
+
+        }
+        p{
+            text-align: center;
+            font-size: 16px;
+            font-family: 'Philosopher', sans-serif;
+
+        }
+        #Bilde {
+            width: 100%;
+        }
+
+        @media (max-width: 720px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<header></header>
+
+<input type="checkbox" id="cb">
+<label id="burger" for="cb">
+    <div></div>
+    <div></div>
+    <div></div>
+</label>
+<nav id="menu">
+    <a href="Nettside_NH.html">HOME</a>
+    <a href="europa.html">Travel to Europa</a>
+    <a href="asia.html">Travel to Asia</a>
+    <a href="usa.html">Travel to USA</a>
+    <a href="#">ABOUT</a>
+
+
+</nav>
+<section>
+    <h1>Travel to USA</h1>
+    <h2>Top 5</h2>
+
+</section>
+
+<main>
+    <div class="wrapper">
+
+        <div class="one">
+            <h3>1. New York City</h3>
+            <p>One of the greatest cities in the world, New York is always a whirlwind of activity, with famous sites at every
+                turn and never enough time to see them all. Some people come here to enjoy the Broadway shows; others come
+                specifically to shop; and many come simply to see the sights: the Statue of Liberty, Empire State Building,
+                Brooklyn Bridge, Central Park, historic neighborhoods, and numerous world famous museums. New additions in
+                recent years, like the High Line and One World Observatory, offer unique perspectives of the city.</p>
+
+        </div>
+
+        <div class="two">
+            <img src="new-york.jpg" id="Bilde" >
+        </div>
+
+
+
+        <div class="three">
+            <img src="San-Francisco.jpg" id="Bilde"  >
+        </div>
+        <div class="four">
+            <h3>2. San Francico</h3>
+            <p>Set along the ocean, with rolling hills and the iconic Golden Gate Bridge, San Francisco is one of the most
+                beautiful cities in the United States and the jewel of Northern California. The city is full of history,
+                great neighborhoods, parks, beaches, museums, and a whole host of entertainment options. Some of the most
+                notable attractions, beyond the famous bridge, are historic Alcatraz Island and Fisherman's Wharf. In the
+                city center is Golden Gate Park, a huge green space with all kinds of things to do.</p>
+        </div>
+
+
+        <div class="five">
+            <h3>3. Washington</h3>
+            <p>The natural world seems larger than life in Washington State, where giant conifers drip with lush green
+                mosses in the Hoh Rain Forest, and volcanoes sit quietly (Mount Rainier and Mount Baker) or show the
+                devastating effects of an eruption (Mount St. Helens). Seattle is the state's largest and trendiest city - its
+                museums, attractions, and technology companies never being far from the historic waterfront. The state capital,
+                Olympia, centers on an impressive legislative building but is otherwise evergreen and sleepy.</p>
+        </div>
+
+        <div class="six">
+            <img src="Washington.D.C.jpg" id="Bilde" >
+        </div>
+
+        <div class="seven">
+            <img src="miami.jpg" id="Bilde"  >
+
+        </div>
+
+        <div class="eight">
+            <h3>4. Barcelona</h3>
+            <p>Miami lies on the southeast side of the Florida Peninsula, separated from the Atlantic Ocean by the Biscayne
+                Bay lagoon and Miami Beach. The city's pleasant winter climate makes it a very popular holiday destination,
+                particularly for those in the northern regions of the country. The beaches of Greater Miami are a major
+                highlight, as is the Art Deco architecture of Miami Beach. Outside the city but nearby is Everglades National
+                Park, known for its unique ecosystem and wildlife.</p>
+
+        </div>
+
+
+        <div class="nine">
+            <h3>5. Hawaii</h3>
+            <p>Discover why the six Islands of Aloha are home to treasures unlike any other on earth: The dramatic cliffs
+                of the Napali Coast on Kauai. The vibrant shores of Waikiki Beach on Oahu. The miles of white sands of
+                Papohaku Beach on Molokai. The dolphin-friendly waters of Hulopoe Bay on Lanai. The summit of Haleakala on
+                Maui. The primal energy of Hawaii Volcanoes National Park on the Island of Hawaii. </p>
+
+        </div>
+
+        <div class="ten">
+            <img src="hawaii.jpg" id="Bilde">
+
+        </div>
+
+    </div>
+</body>
+</main>
+
+
+</body>
+</html>

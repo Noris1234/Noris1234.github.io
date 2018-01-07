@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Burgeren</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellefair|Cinzel|Fondamento|Philosopher|Playfair+Display+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+            font-size: 16px;
+            min-height: 100vh;
+            background-image: url("venice.jpg");
+            background-size: cover;
+            background-position: center;
+            font-family: 'Anton', sans-serif;
+
+        }
+        header {
+            height: 32px;
+            background-color: black;
+        }
+
+        #cb {
+            display: none;
+        }
+
+
+        #burger {
+            display: flex;
+            width: 16px;
+            height: 16px;
+            flex-direction: column;  /*bortover*/
+            justify-content: space-between;
+            cursor: pointer;
+            position: absolute;
+            left: 8px;
+            top: 8px;
+
+        }
+        #burger > div {
+            background-color: white;
+            height: 2px;
+            transition: 0.5s;
+        }
+
+        #menu {
+            width: 200px;
+            background-color:white;
+            position: absolute;
+            top: 33px;
+            left: -200px;
+            min-height: calc(100vh - 33x);
+            transition: 0.8s;
+            text-align: center;
+            padding-top: 40px;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        #menu > a {
+            display: block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: black;
+        }
+        #menu > a:hover {
+            color: white;
+        }
+
+
+        #cb:checked ~ #menu {
+            left: 0;
+        }
+        #cb:checked ~ #burger > div:first-child {
+            transform: translateY(7px) rotate(45deg);
+        }
+        #cb:checked ~ #burger > div:nth-child(2) {
+           opacity: 0;
+        }
+        #cb:checked ~ #burger > div:last-child {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        section {
+            color: snow;
+            text-shadow: 2px 2px 2px black;
+            text-transform: uppercase;
+            font-family: "Trebuchet MS"; Verdana, sans-serif;
+        }
+        h1{
+            text-align: center;
+            font-size: 60px;
+            margin-top: 100px;
+            font-family: 'Fondamento', cursive;
+        }
+        h2{
+            text-align: center;
+            font-size: 40px;
+            margin-top: 10px;
+            font-family: 'Fondamento', cursive;
+
+        }
+        h3{
+            color: white;
+            font-size: 14px;
+            text-align: right;
+            margin-top: 0px;
+            margin-bottom: 200px;
+
+
+        }
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header></header>
+
+    <input type="checkbox" id="cb">
+    <label id="burger" for="cb">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+    <nav id="menu">
+        <a href="Nettside_NH.html">HOME</a>
+        <a href="europa.html">Travel to Europe</a>
+        <a href="asia.html">Travel to Asia</a>
+        <a href="usa1.html">Travel to USA</a>
+        <a href="about1.html">About</a>
+
+       
+    </nav>
+<section>
+
+    <h1>Exprience The World</h1>
+    <h2>Traveling Tips</h2>
+
+
+
+
+
+
+</section>
+
+    <script>
+        var main = document.querySelector("main");
+        var bilder = [ "venice.jpg","bali.jpg", "miami.jpg", "new-york.jpg", "tokyo.jpg", "Singapore-skyline.jpg", "shanghai.jpg", "London.jpg", "hawaii.jpg"]
+
+
+        var neste = 1;
+
+        function byttBilde() {
+
+            var bilde = bilder[neste];
+            document.body.style.backgroundImage = "url(" + bilde + ")";
+            neste++;
+            if(neste >= bilder.length) {
+                neste = 0;
+            }
+
+        }
+
+        setInterval(byttBilde, 3000);
+
+    </script>
+
+
+
+
+</body>
+</html>
