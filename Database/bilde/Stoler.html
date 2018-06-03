@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <title>Spisestol</title>
+    <style>
+        body{
+            text-align: center;
+            min-height: 100vh;
+            background-color: #dddddd;
+            font-family: "Times New Roman";
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 100px;
+            font-family: 'Playfair Display SC', serif;
+            color: #5e5e5e;
+        }
+        section {
+            color: snow;
+            text-shadow: 2px 2px 2px black;
+            text-transform: uppercase;
+            font-family: "Trebuchet MS", Verdana, sans-serif;
+        }
+
+
+        header{
+            background-color: white;
+            filter: drop-shadow(0 5px 5px black);
+        }
+
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;
+        }
+
+        body > header > nav > a {
+            text-align: center;
+            padding: 15px ;
+            text-decoration: none;
+            color: #222222;
+        }
+
+        main {
+            max-width: 970px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+            background-color:white;
+            background-position: center center;
+
+        }
+
+        main > article {
+            border: 2px solid white(233,171,88);
+            background-color: rgba(233, 171, 88, .5);
+            padding: 1em;
+            color: black;
+            background-color: silver;
+
+        }
+
+
+
+        main img {
+            width: 100%;
+        }
+
+        main h1 {
+            font-size: 22px;
+
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="nettside.html">HJEM</a>
+        <a href="Stuen.html">STUE</a>
+        <a href="Spisestue.html">SPISESTUE</a>
+        <a href="Soverom.html">SOVEROM</a>
+        <a href="handlekurv.html">
+        <button type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+        </button> </a>
+    </nav>
+</header>
+
+<h1>Spiestol</h1>
+
+<main id="products">
+
+</main>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDHqwGBx3Uss1QQBktPjiYe9I_gujeEnIk",
+        authDomain: "database-4dae2.firebaseapp.com",
+        databaseURL: "https://database-4dae2.firebaseio.com",
+        projectId: "database-4dae2",
+        storageBucket: "database-4dae2.appspot.com",
+        messagingSenderId: "1092064523122"
+    };
+    firebase.initializeApp(config);
+</script>
+
+<script>
+    const db = firebase.database();
+    const produkter = db.ref("møbler/Stol");
+    const handlekurv = db.ref("handlekurv");
+
+    const products = document.getElementById("products");
+
+    function kjop(id) {
+        alert(id);
+        const vare = produkter.child(id);
+
+        vare.on("value", function(snap){
+            let v = snap.val();
+
+            handlekurv.push({
+                vareid: id,
+                pris: v.pris,
+                navn: v.navn,
+                bilde: v.bilde,
+                beskrivelse: v.beskrivelse
+            });
+
+        });
+
+    }
+
+    function visProdukt(snap) {
+        const key = snap.key;
+        const produkt = snap.val();
+
+        products.innerHTML += `
+            <article>
+                <img src="${produkt.bilde}">
+                <h1>${produkt.navn}</h1>
+                <p>Info: ${produkt.beskrivelse}</p>
+                <p>KR ${produkt.pris}</p>
+                <button onclick="kjop('${key}')">KJØP</button>
+            </article>
+        `;
+    }
+
+
+    produkter.on("child_added", visProdukt);
+
+
+</script>
+
+
+</body>
+</html>
