@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Oppgave 4.5.3</title>
+</head>
+<body>
+<i> Oppgave 4.5.3</i>
+<table id =tblGange border = "1"><tbody id = "tblBody"></tbody></table>
+<script>
+    var tblBody = document.getElementById("tblBody");
+    var txtUt = "";
+    for (var i=1; i<=10; i++){
+        txtUt += "<tr>"
+        for (var j=1; j<=10; j++) {
+            txtUt += "<td>" + (i * j) + "</td>";
+        }
+        txtUt += "</tr>";
+    }
+    tblBody.innerHTML +=txtUt
+</script>
+</body>
+</html>

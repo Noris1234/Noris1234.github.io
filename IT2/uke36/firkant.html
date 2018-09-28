@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>En firkant</title>
+    <style>
+
+        #minFirkant {
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            transition: 1s;
+        }
+
+    </style>
+</head>
+<body>
+
+    <input type="range" id="inpStorrelse" min="0" max="1024">
+
+    <div id="minFirkant"></div>
+
+    <script>
+
+        var inpStorrelse = document.getElementById("inpStorrelse");
+        var minFirkant = document.getElementById("minFirkant");
+
+        inpStorrelse.onmousemove = function () {
+            minFirkant.style.width = inpStorrelse.value + "px"; //endrer str på firkant
+        }
+
+    </script>
+</body>
+</html>

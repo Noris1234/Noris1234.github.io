@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Oppgave 4.5.2</title>
+</head>
+<body>
+
+<i>Oppgave 2.a</i>
+<script>
+    var fibmin2 = 0;
+    var fibmin1 = 1;
+    var fib = fibmin2;
+    var txtUt = "";
+    for(var i=0; i<10; i++){
+        txtUt+=+fib+",";
+        fibmin2 = fibmin1;
+        fibmin1 = fib;
+        fib = fibmin2 + fibmin1;
+    }
+    document.write(txtUt)
+</script>
+
+
+
+</body>
+</html>

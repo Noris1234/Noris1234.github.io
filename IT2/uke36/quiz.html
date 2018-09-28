@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>QUIZ</title>
+</head>
+<body>
+
+    <p>Hva er hovedstaten i Mongolia</p>
+    <input type="text" id="inpSvar" placeholder="Skriv inn ditt svar her">
+    <button id="btnSvar">Send inn</button>
+    <div id="divSvar"></div>
+
+<script>
+
+    var inpSvar = document.getElementById("inpSvar"); //variabel som referere
+    var btnSvar = document.getElementById("btnSvar"); //ref. til knapp
+    var divSvar = document.getElementById("divSvar"); //ref. til divSvar
+
+    btnSvar.onclick = function () { //funksjonen som skje rhvis knappen trykkes på
+        if (inpSvar.value === "Ulan Bator" || "Ulabataar");
+        divSvar.innerHTML = "Gratulerer du er veldig flink";
+    }
+    else { //kode som kjøres hvis brukeren ikke skirver riktig
+      divSvar.innerHTML = "Det var feil!";
+    }
+
+    btnSvar.onclick = function () { //funksjonen som skje rhvis knappen trykkes på
+        if (inpSvar.value === "Ulan Bator") {
+            divSvar.innerHTML = "Det var riktig, du skrive rpå norsk";
+        }   else {
+            divSvar.innerHTML = "Feil";
+        }
+    }
+
+</script>
+
+</body>
+</html>
