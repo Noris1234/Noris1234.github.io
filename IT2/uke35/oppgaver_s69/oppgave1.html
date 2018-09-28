@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>oppgave1</title>
+</head>
+<body>
+
+
+
+    <p id="Natur"></p>
+
+<script>
+    var parMinTekst = document.getElementById("Natur");
+    //Oppretter en variabel som refererertil HTML-elementet med ID mittAvsnitt
+
+    alert(parMinTekst.innerHTML); //Skriver ut innholdet i mittAvsnitt i en alert-boks
+    parMinTekst.innerHTML = "Nytt innhold";
+
+    parMinTekst.innerHTML += "Mer nytt innhold, som ikke overskriver den gamle";
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>oppgave2</title>
+</head>
+<body>
+
+
+<h1>Min meny</h1>
+<ul id="meny"></ul>
+
+<script>
+    var meny = document.getElementById("meny");
+    var forrett = prompt("Hva skal du ha til forrett?");
+    var hovedrett = prompt("Hva skal du ha til hovedrett?");
+    var dessert = prompt("Hva skal du ha til dessert?");
+    meny.innerHTML = "<li>Forrett:<b>" + forrett + "</b></li>";
+    meny.innerHTML = "<li>Hovedrett:<b>" + hovedrett + "</b></li>";
+    meny.innerHTML = "<li>Dessert:<b>" + dessert + "</b></li>";
+</script>
+
+
+</body>
+</html>
