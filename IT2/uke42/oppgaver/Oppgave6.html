@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Oppgave6</title>
+</head>
+<body>
+
+<h1>Gjett tall</h1>
+<p>Gjett tallet! Lag et spill som lagrer et hemmelig tall mellom 1-100 i en variabel og spør brukeren om å gjette tallet.
+    Gi beskjed til brukeren om tallet som ble gjettet var for høyt eller for lavt. Hvis brukeren gjetter feil skal
+    han/hun få beskjed om å prøve på nytt.</p>
+
+<script>
+
+    var hemmeligTall = Math.floor(Math.random()*100)+1;
+    var gjett = number(prompt("Gjett et tall mellom 1 og 100"));
+
+    while (gjett !== hemmeligTall) {
+
+        if (gjett < hemmeligTall) {
+            gjett = number(prompt("Du gjettet for lavt. Prøv igjen"));
+            console.log("Du gjettet for lavt");
+        }
+        else (gjett < hemmeligTall){
+            gjett = number(prompt("Du gjettet for høyt. Prøv igjen"));
+            console.log("Du gjettet for høyt");
+        }
+        alert("Riktig! DU vant");
+
+    }
+
+</script>
+
+</body>
+</html>
