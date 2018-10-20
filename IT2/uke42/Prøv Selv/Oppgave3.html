@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Oppgave3</title>
+</head>
+<body>
+<p id="melding"></p> <!--tompt p element-->
+
+<script>
+
+    var medlding = document.getElementById("melding"); //refererer til p-element
+    function uttak(belop) {
+        var saldo = 10000; //Global variabel. Det er 10000 på kontoen
+        saldo = saldo - belop; //endrer saldo på kontoen
+        return "Du har tatt ut kr" + belop + ".Ny saldo er kr" + saldo;
+    }
+    melding.innerHTML = uttak(1500); //funksjonskallet erstattes av returverdien. Returverdien vises i p-element
+
+
+</script>
+
+</body>
+</html>
