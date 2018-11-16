@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Test2</title>
+    <style>
+        #CTX {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+    </style>
+    <script>
+
+        window.addEventListener("load", init);
+
+        var ground = null;
+        var pipe = null;
+        var bird = null;
+
+        var W = 500;
+        var W = 600;
+
+
+        var groundStep = 0;
+        var scroolingSpeed = 2;
+
+        function Init() {
+            var canvas = document.getElementById("CTX");
+
+            canvas.setAttribute("width", W);
+            canvas.setAttribute("heiht", W);
+
+
+            var ctx = canvas.getContext("2d");
+
+            ground = new Image();
+            ground.scr = "ground.png";
+            pipe = new Image();
+            pipe.scr = "pipe.png";
+            bird = new Image();
+            bird.scr =  "bird.png";
+
+
+            var interval = window.setInterval(function () {
+                GUpdate(ctx, canvas);
+            }, 30);
+        }
+        
+        function groundStepIn() {
+            if (ground != null) {
+                var speed = 2;
+                groundStep += speed;
+                if (groundStep >= ground.width) {
+                    groundStep = 0;
+                }
+            }
+        }
+
+            
+
+
+        
+        function GUpdate(ctx, canvas) {
+            ctx.fillStyle = "rgb(100, 149, 237)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            groundStepIn();
+
+            if (ground != null)
+            {
+
+            for (var i = groundStep * (-1); i < canvas.width + groundStep; i += ground.width){
+                ctx.drawImage(ground, i, canvas.height - ground.height);
+            }
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <canvas id="CTX"></canvas>
+
+</body>
+</html>
