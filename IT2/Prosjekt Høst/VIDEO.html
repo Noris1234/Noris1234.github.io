@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Nettside</title>
+    <style>
+        body{
+            text-align: center;
+
+        }
+        main {
+            max-width: 970px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #222222;
+
+        }
+
+
+        header{
+            background-color: white;
+            filter: drop-shadow(0 5px 5px black);
+        }
+
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;
+        }
+
+        body > header > nav > a {
+            text-align: center;
+            padding: 15px ;
+            text-decoration: none;
+            color: #222222;
+        }
+
+        @media (max-width: 750px) {
+
+            body > header > nav {
+                grid-auto-flow: row;
+            }
+            h1{
+                text-align: center;
+                font-size: 100px;
+                font-family: 'Playfair Display SC', serif;
+
+
+            }
+            h2{
+                text-align: center;
+                font-size: 15%;
+                font-family: 'Playfair Display SC', sans-serif;
+
+            }
+            i {
+                text-align: center;
+                font-size: 30px;
+                font-family: "Playfair Display SC";
+            }
+        }
+        h3 {
+            font-size: 100%;
+
+        }
+        .wrapper {
+            max-width: 940px;
+            margin: 50px auto;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            text-align: center;
+
+        }
+
+        .wrapper > div {
+            border: 2px solid black(233,171,88);
+            background-color: rgba(233, 171, 88, .5);
+            padding: 50px;
+            color: black;
+            background-color: #eeeeee;
+            text-align: center;
+        }
+
+        .Kategorier  img {
+            width: 100%;
+        }
+
+        #Bilde {
+            width: 90%;
+        }
+
+        @media (max-width: 720px) {
+            .wrapper {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .filmer {
+            margin-top: 100px;
+            display: flex;
+        }
+        .filmer > article {
+            border: 2px solid white;
+            height: 200px;
+            flex: 1;
+            transition: 0.4s;
+            background-size: cover;
+            background-position: center center;
+            opacity: 0.4;
+        }
+        .filmer > article:hover {
+            flex: 2;
+            transform: scaleY(1.5);
+            opacity: 1;
+            z-index: 1000;
+        }
+        .filmer > article:first-child{
+            transform-origin: left;
+        }
+        .filmer > article:last-child{
+            transform-origin: right;
+        }
+        .filmer > article:nth-child(1) {background-image: url("vinter1.jpg")}
+        .filmer > article:nth-child(2) {background-image: url("vinter2.jpg")}
+        .filmer > article:nth-child(3) {background-image: url("vinter3.jpeg")}
+        .filmer > article:nth-child(4) {background-image: url("vinter4.jpg")}
+        .filmer > article:nth-child(5) {background-image: url("vinter5.jpg")}
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+<header>
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#">VIDEO</a>
+        <a href="#">KJØKKEN</a>
+        <a href="#">SOVEROM</a>
+
+    </nav>
+</header>
+
+
+
+<video width="800" height="500" controls>
+    <source src="Welcome%20to%20Winter%20.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+</video>
+
+
+
+</body>

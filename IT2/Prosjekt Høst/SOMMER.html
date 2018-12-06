@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>sommer</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: white;
+
+
+        }
+        main {
+            max-width: 970px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #222222;
+
+        }
+
+
+        header{
+            background-color: white;
+            filter: drop-shadow(0 5px 5px black);
+        }
+
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;
+        }
+
+        body > header > nav > a {
+            text-align: center;
+            padding: 15px ;
+            text-decoration: none;
+            color: #222222;
+        }
+
+        @media (max-width: 750px) {
+
+            body > header > nav {
+                grid-auto-flow: row;
+            }
+            h1{
+                text-align: center;
+                font-size: 100px;
+                font-family: 'Playfair Display SC', serif;
+                color: white;
+
+
+            }
+            h2{
+                text-align: center;
+                font-size: 15%;
+                font-family: 'Playfair Display SC', sans-serif;
+
+            }
+            i {
+                text-align: center;
+                font-size: 30px;
+                font-family: "Playfair Display SC";
+                position: center;
+
+            }
+        }
+        h3 {
+            font-size: 100%;
+
+        }
+        .wrapper {
+            max-width: 940px;
+            margin: 50px auto;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            text-align: center;
+
+        }
+
+        .wrapper > div {
+            border: 2px solid black(233,171,88);
+            background-color: rgba(233, 171, 88, .5);
+            padding: 50px;
+            color: black;
+            background-color: #eeeeee;
+            text-align: center;
+        }
+        .wrapper1 {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+            text-align: center;
+
+        }
+
+        .wrapper1 > div {
+            border: 2px solid black(233,171,88);
+            background-color: rgba(233, 171, 88, .5);
+            padding: 50px;
+            color: black;
+            background-color: #eeeeee;
+            text-align: center;
+        }
+
+        .Kategorier  img {
+            width: 100%;
+        }
+
+        #Bilde {
+            width: 90%;
+        }
+
+        @media (max-width: 720px) {
+            .wrapper {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .bildefremvisning {
+            position: center;
+            width: 800px;
+            height: 400px;
+            background-position: center;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="hjem.html">HJEM</a>
+        <a href="sommer.html">SOMMER</a>
+        <a href="vinter.html">VINTER</a>
+
+    </nav>
+</header>
+
+
+
+
+
+<main>
+    <div class="wrapper">
+        <div class="one">
+            <h1>Sommer</h1>
+            <i>Trysil er et paradis for både store og små som elsker å være ute i naturen – selv om sommeren.</i>
+
+        </div>
+        <div class="two">
+
+            <img src="sommer5.jpg" id="Bilde" width="300" height="200">
+            <a href="#"></a>
+        </div>
+
+
+
+</main>
+
+<main>
+
+    <div class="wrapper1"
+
+<img class="bildefremvisning" src="sommer1.jpg">
+<img class="bildefremvisning" src="sommer2.jpg">
+<img class="bildefremvisning" src="sommer3.jpg">
+<img class="bildefremvisning" src="sommer4.jpg">
+
+</main>
+
+<main>
+    <div class="wrapper">
+        <div class="four">
+            <video width="300" height="200" controls>
+                <source src="sykkel.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+            </video>
+            <a href="#"></a>
+        </div>
+        <div class="three">
+            <h1>Sykkling</h1>
+            <i>I Trysil finnes det variert sykling for alle. De som liker fart og spenning, kan ta med sykkelen opp i heisen og suse ned stien Magic Moose, og de som liker stisykling, kan velge stiene i Gullia eller Fjellrunden.</i>
+        </div>
+
+        <div class="five">
+            <h1>Rafting</h1>
+            <i>På rafting sitter flere sammen i en stor raftebåt med en guide i hver båt. Familieturene blir arrangert sør i Trysilelva.</i>
+        </div>
+
+            <div class="six">
+                <video width="300" height="200" controls>
+                    <source src="Familierafting%20i%20Trysil.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                </video>
+                <a href="#"></a>
+            </div>
+
+            <div class="seven">
+                <video width="300" height="200" controls>
+                    <source src="høyt%20og%20lavt.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                </video>
+                <a href="#"></a>
+            </div>
+            <div class="eight">
+                <h1>Høyt og Lavt</h1>
+                <i>Klatreparken Høyt & Lavt Trysil åpnet i juni 2017. Den ligger sentralt på Trysil Turistsenter. Om sommeren skjer mye av klatringen på tvers av sykkelløypene. </i>
+            </div>
+
+
+
+</main>
+
+<script>
+
+
+    var karusell = 0;
+    carousel();
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("bildefremvisning");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        karusell++;
+        if (karusell > x.length) {karusell = 1}
+        x[karusell-1].style.display = "block";
+        setTimeout(carousel, 2000); // BILDET ENDRER SEG HVERT 2. SEKUND
+    }
+</script>
+
+
+
+
+
+
+</body>

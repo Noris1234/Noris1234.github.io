@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>hjem</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            font-size: 17px;
+        }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .content {
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+
+        #myBtn {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #myBtn:hover {
+            background: #ddd;
+            color: black;
+        }
+
+        body{
+            text-align: center;
+            background-color: white;
+
+
+        }
+        main {
+            max-width: 970px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #222222;
+
+        }
+
+
+        header{
+            background-color: white;
+            filter: drop-shadow(0 5px 5px black);
+        }
+
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;
+        }
+
+        body > header > nav > a {
+            text-align: center;
+            padding: 15px ;
+            text-decoration: none;
+            color: #222222;
+        }
+
+        @media (max-width: 750px) {
+
+            body > header > nav {
+                grid-auto-flow: row;
+            }
+            h1{
+                text-align: center;
+                font-size: 100px;
+                font-family: 'Playfair Display SC', serif;
+                color: white;
+
+
+            }
+            h2{
+                text-align: center;
+                font-size: 15%;
+                font-family: 'Playfair Display SC', sans-serif;
+
+            }
+            i {
+                text-align: center;
+                font-size: 30px;
+                font-family: "Playfair Display SC";
+                position: center;
+
+            }
+        }
+        h3 {
+            font-size: 100%;
+
+        }
+        .wrapper {
+            max-width: 940px;
+            margin: 50px auto;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            text-align: center;
+
+        }
+
+        .wrapper > div {
+            border: 2px solid black(233,171,88);
+            background-color: rgba(233, 171, 88, .5);
+            padding: 50px;
+            color: black;
+            background-color: #eeeeee;
+            text-align: center;
+        }
+
+        .Kategorier  img {
+            width: 100%;
+        }
+
+        #Bilde {
+            width: 90%;
+        }
+
+        @media (max-width: 720px) {
+            .wrapper {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .filmer {
+            margin-top: 100px;
+            display: flex;
+        }
+        .filmer > article {
+            border: 2px solid white;
+            height: 200px;
+            flex: 1;
+            transition: 0.4s;
+            background-size: cover;
+            background-position: center center;
+            opacity: 0.4;
+        }
+        .filmer > article:hover {
+            flex: 2;
+            transform: scaleY(1.5);
+            opacity: 1;
+            z-index: 1000;
+        }
+        .filmer > article:first-child{
+            transform-origin: left;
+        }
+        .filmer > article:last-child{
+            transform-origin: right;
+        }
+        .filmer > article:nth-child(1) {background-image: url("trysil2.jpg")}
+        .filmer > article:nth-child(2) {background-image: url("trysil3.jpg")}
+        .filmer > article:nth-child(3) {background-image: url("trysil5.jpg")}
+        .filmer > article:nth-child(4) {background-image: url("trysil4.jpg")}
+        .filmer > article:nth-child(5) {background-image: url("trysil6.jpg")}
+
+        video {
+            text-align: center;
+            position: center;
+        }
+
+        .slides {
+            width: 500%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            transition: 1s;
+
+        }
+        .slides > div {
+            text-align: center;
+        }
+        .slides > div > img {
+            width: 60%;
+
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<!-- The video -->
+<video autoplay muted loop id="myVideo">
+    <source src="snow.mp4" type="video/mp4">
+</video>
+
+<!-- Optional: some overlay text to describe the video -->
+<div class="content">
+    <h1>Heading</h1>
+    <p>Lorem ipsum...</p>
+    <!-- Use a button to pause/play the video with JavaScript -->
+    <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+    // Get the video
+    var video = document.getElementById("myVideo");
+
+    // Get the button
+    var btn = document.getElementById("myBtn");
+
+    // Pause and play the video, and change the button text
+    function myFunction() {
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+        } else {
+            video.pause();
+            btn.innerHTML = "Play";
+        }
+    }
+</script>
+<header>
+    <nav>
+        <a href="hjem.html">HJEM</a>
+        <a href="sommer.html">SOMMER</a>
+        <a href="vinter.html">VINTER</a>
+
+    </nav>
+</header>
+
+
+
+
+
+<main>
+    <div class="wrapper">
+        <div class="one">
+            <h1>Trysil</h1>
+            <i>Trysil, som er Norges største skianlegg, er bygd rundt Trysilfjellet og er kjent for sine velpreparerte bakker. Her ligger både overnattingssteder og restauranter på skiavstand. Luksuriøse hoteller og moderne heiser gjør ferien komfortabel for hele familien.
+                .</i>
+        </div>
+        <div class="two">
+
+            <img src="trysil1.jpg" id="Bilde" width="300" height="200">
+            <a href="#"></a>
+        </div>
+
+
+
+</main>
+
+
+
+
+<section class="filmer">
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+
+</section>
+
+<main>
+    <div class="wrapper">
+        <div class="four">
+            <video width="300" height="200" controls>
+                <source src="trysil%20film.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+            <a href="#"></a>
+        </div>
+
+        <div class="three">
+            <h1>Skireise til Trysil </h1>
+            <i>Skistar Trysil tilbyr online bestilling av overnatting i hytter, leiligheter og hotell, samt skileie, skiskole og Skipass - i Norges største skisenter. Velkommen!</i>
+        </div>
+
+        <div class="five">
+            <h1>Historie</h1>
+            <p>På høyre side kan du høre på historien til Trysil</p>
+
+        </div>
+
+        <div class="six">
+            <img src="historie.png" width="100" height="100">
+            <audio controls>
+                <source src="Historien%20om%20Trysil%20(1)_1.mp3" type='audio/mp3'>
+                <source src="historie.png" type='audio/ogg; codecs=vorbis'>
+            </audio>
+        </div>
+
+    </div>
+
+    <div class="slides">
+
+        <div>
+            <img src="bilde1.jpg">
+        </div>
+
+        <div>
+            <img src="bilde2.jpg">
+        </div>
+
+        <div>
+            <img src="bilde3.jpg">
+        </div>
+
+        <div>
+            <img src="bilde4.jpg">
+        </div>
+
+        <div>
+            <img src="bilde5.jpg">
+        </div>
+
+    </div>
+
+</main>
+
+<button id="forrige">Forrgie</button>
+<button id="neste">Neste</button>
+
+<script>
+    let slides = document.querySelector(".slides");
+    let marg = 0;
+    function forover() {
+        if(marg > -350) {
+            marg = marg - 100;
+            slides.style.marginLeft =  marg + "%";
+        } else {
+            slides.animate([
+                {transform: "translateX(20px)"},
+                {transform: "translateX(0)"},
+                {transform: "translateX(15px)"},
+                {transform: "translateX(0)"}
+            ], {
+                duration: 200
+            });
+        }
+    }
+    function bakover() {
+        if(marg < 0) {
+            marg = marg + 200;
+            slides.style.marginLeft = marg + "%";
+        } else {
+            slides.animate([
+                {transform: "translateX(-20px)"},
+                {transform: "translateX(0)"},
+                {transform: "translateX(-15px)"},
+                {transform: "translateX(0)"}
+            ], {
+                duration: 200
+            });
+        }
+    }
+    document.onclick = function(klikk) {
+        if(klikk.clientX > innerWidth / 2) {
+            forover();
+        } else {
+            bakover();
+        }
+    }
+</script>
+
+</body>

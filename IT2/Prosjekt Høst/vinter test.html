@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>vinter</title>
+    <style>
+
+
+
+
+        body{
+            text-align: center;
+            background-color: white;
+
+
+
+        }
+        main {
+            max-width: 970px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #222222;
+
+        }
+
+
+        header{
+            background-color: white;
+            filter: drop-shadow(0 5px 5px black);
+        }
+
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;
+        }
+
+        body > header > nav > a {
+            text-align: center;
+            padding: 15px ;
+            text-decoration: none;
+            color: #222222;
+        }
+
+        @media (max-width: 750px) {
+
+            body > header > nav {
+                grid-auto-flow: row;
+            }
+            h1{
+                text-align: center;
+                font-size: 100px;
+                font-family: 'Playfair Display SC', serif;
+                color: white;
+
+
+            }
+            h2{
+                text-align: center;
+                font-size: 15%;
+                font-family: 'Playfair Display SC', sans-serif;
+
+            }
+            i {
+                text-align: center;
+                font-size: 30px;
+                font-family: "Playfair Display SC";
+                position: center;
+
+            }
+        }
+        h3 {
+            font-size: 100%;
+
+        }
+        .wrapper {
+            max-width: 940px;
+            margin: 50px auto;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            text-align: center;
+
+        }
+
+        .wrapper > div {
+            border: 2px solid black(233,171,88);
+            background-color: rgba(233, 171, 88, .5);
+            padding: 50px;
+            color: black;
+            background-color: #eeeeee;
+            text-align: center;
+        }
+        .wrapper1 {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+            text-align: center;
+
+        }
+
+        .wrapper1 > div {
+            border: 2px solid black(233,171,88);
+            background-color: rgba(233, 171, 88, .5);
+            padding: 50px;
+            color: black;
+            background-color: #eeeeee;
+            text-align: center;
+        }
+
+        .Kategorier  img {
+            width: 100%;
+        }
+
+        #Bilde {
+            width: 90%;
+        }
+
+        @media (max-width: 720px) {
+            .wrapper {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .bildefremvisning {
+            position: center;
+            width: 800px;
+            height: 400px;
+            background-position: center;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            font-size: 17px;
+        }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        #myBtn {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #myBtn:hover {
+            background: #ddd;
+            color: black;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+<header>
+    <nav>
+        <a href="hjem.html">HJEM</a>
+        <a href="sommer.html">SOMMER</a>
+        <a href="vinter.html">VINTER</a>
+
+    </nav>
+</header>
+
+<video autoplay muted loop id="myVideo">
+    <source src="snow1.mov" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+
+<main>
+    <div class="wrapper">
+        <div class="one">
+            <h1>Vinter</h1>
+            <i>Trysil består av fire sammenhengende skiområder. På begge sider av fjellet ligger det luksuriøse, moderne hotell med både leiligheter og hotellrom samt bading, spa og flere restauranter.</i>
+
+        </div>
+        <div class="two">
+
+            <img src="trysilfjellet.jpg" id="Bilde" width="300" height="200">
+            <a href="#"></a>
+        </div>
+
+
+
+</main>
+
+<main>
+
+    <div class="wrapper1"
+
+    <img class="bildefremvisning" src="vinter1.jpg">
+    <img class="bildefremvisning" src="vinter2.jpg">
+    <img class="bildefremvisning" src="vinter3.jpg">
+    <img class="bildefremvisning" src="vinter4.jpg">
+
+</main>
+
+<main>
+    <div class="wrapper">
+        <div class="four">
+            <video width="300" height="200" controls>
+                <source src="VELKOMMEN%20TIL%20TRYSIL.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+            </video>
+            <a href="#"></a>
+        </div>
+        <div class="three">
+            <h1>Trysilfjellet </h1>
+            <i>I flere år på rad har Trysil blitt kåret til Norges beste skidestinasjon på World Ski Awards.</i>
+        </div>
+
+        <div class="five">
+            <h1>Langrenn</h1>
+            <i>Langrennsløypene i Trysilfjellet kan settes sammen til korte og lange rundturer. Mulighetene er mange. Skihytta og Fageråsen er flotte utgangspunkt for en vellykket skitur</i>
+        </div>
+
+        <div class="six">
+            <video width="300" height="200" controls>
+                <source src="Drømmedag%20i%20langrennssporet.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+            </video>
+            <a href="#"></a>
+        </div>
+
+        <div class="seven">
+            <video width="300" height="200" controls>
+                <source src="Hundeslede%20i%20Trysil.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+            </video>
+            <a href="#"></a>
+        </div>
+        <div class="eight">
+            <h1>Hundeslede </h1>
+            <i>Hundesledekjøring er spenning, eventyr og opplevelse! I Trysil kan du styre din egen slede gjennom ekte høyfjellsterreng. 40 minutter, halv dag eller hel dag. </i>
+        </div>
+
+
+
+</main>
+
+<script>
+
+
+    var karusell = 0;
+    carousel();
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("bildefremvisning");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        karusell++;
+        if (karusell > x.length) {karusell = 1}
+        x[karusell-1].style.display = "block";
+        setTimeout(carousel, 2000); // BILDET ENDRER SEG HVERT 2. SEKUND
+    }
+</script>
+
+
+<video autoplay muted loop id="myVideo">
+    <source src="snow2.mp4" type="video/mp4">
+</video>
+
+
+
+
+</body>
