@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Oppgave4</title>
+    <style>
+        .filmer {
+            margin-top: 100px;
+            display: flex;
+        }
+        .filmer > article {
+            border: 2px solid white;
+            height: 200px;
+            flex: 1;
+            transition: 0.4s;
+            background-size: cover;
+            background-position: center center;
+            opacity: 0.4;
+        }
+        .filmer > article:hover {
+            flex: 2;
+            transform: scaleY(1.5);
+            opacity: 1;
+            z-index: 1000;
+        }
+        .filmer > article:first-child{
+            transform-origin: left;
+        }
+        .filmer > article:last-child{
+            transform-origin: right;
+        }
+        .filmer > article:nth-child(1) {background-image: url("artister/brunomars.jpg)}
+        .filmer > article:nth-child(2) {background-image: url("artister/gambino.jpg")}
+        .filmer > article:nth-child(3) {background-image: url("artister/jayz.jpg")}
+        .filmer > article:nth-child(4) {background-image: url("artister/kendrick.jpg")}
+        .filmer > article:nth-child(5) {background-image: url("artister/lorde.jpg")}
+
+        button {
+            position: center;
+            display: grid;
+            background-color: white;
+            filter: drop-shadow(0 5px 5px black);
+            text-align: center;
+
+
+
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+<img id="bilder" src="albumcover/24KMagic.jpg" width="800" >
+
+<button id="forrige">Forrgie</button>
+<button id="neste">Neste</button>
+
+<button id="random">Tilfeldig bilde</button>
+
+
+<script>
+
+    const neste = document.getElementById("neste");
+    const forrige = document.getElementById("forrige");
+    const random = document.getElementById("random");
+
+    const bilder = document.getElementById("bilder");
+
+    let bildeListe = ["albumcover/444.jpg", "albumcover/awaken.jpg", "albumcover/damn.jpg", "albumcover/melodrama.jpg"];
+
+    random.onclick = function () {
+        bilder.src = bildeListe[Math.floor(Math.random()*bildeListe.length)];
+    }
+    let n = 0
+    neste.onclick = function () {
+        n++
+        if (n > 4){
+            n=0
+        }
+        bilder.src = bildeListe [n];
+    }
+
+    forrige.onclick = function () {
+        n--
+        if (n < 0){
+            n=2
+        }
+        bilder.src = bildeListe [n];
+    }
+
+</script>
+
+
+</body>
+</html>

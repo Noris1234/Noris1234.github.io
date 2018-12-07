@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Oppgave 1</title>
+</head>
+<body>
+
+<h1>Oppgave 1</h1>
+
+<i>A</i>
+<p>Hva er en variabel?</p>
+
+<p>Når vi vil at programmet skal lagre enn verdi, som vi kan hente opp igjen, kalles dette for en variabel. Variabelen vi oppretter i programmet, må ha et variabelnavn. Det gjør at maskiner skiller de ulike variablene fra hverandre. Det er programmereren som bestemmer navnet, men det bør beskrive hva som lages. Eks: hvis du skal registrere fornavn og etternavn, blir det logisk at variabelen blir fornavn.
+    Var fornavn: ”Gunhild”;
+    Gunhild er variabelverdien.
+</p>
+
+<p>En variabler er en som deklarerer inne i funksjoner kalle vi lokale variabler. Brukes får å forenkle koden inne i funksjonen. Der er utilgjengelige utenfra.
+    Variabler som vi deklarerer utenfor funksjonen kaller vi globale variabler. Brukes for å ta vare på verdier som skal være tilgjengelige i hele programmet. Kan endres fra alle funksjoner i programmet, også endres utenfor funksjonen.
+</p>
+
+<script>
+
+    var hei = "denne er global";
+
+    function eksempel() {
+        var hei = "Hallo der"; //lokal variabel
+        document.write(hei);
+    }
+    document.write(hei);
+
+    eksempel(); //funksjonskall
+
+</script>
+
+<i>B</i>
+<p>Definer tre variabler som er av tre forskjellige datatyper og legg ved en kommentar med navnet
+    til datatypen.</p>
+
+    Number: let mittTall = 72; //Number
+    String: let minTekst = ”tekst her”; // String
+    Booalean: let minBoolean = true; // Boolean, enten true eller false
+    Array: let minArray = [“Hei”, 56, “Ja”];
+    Object:
+        Let mittObjekt = {
+        Navn: “Kåre”,
+        Alder: 21
+    };
+
+
+
+</body>
+</html>
