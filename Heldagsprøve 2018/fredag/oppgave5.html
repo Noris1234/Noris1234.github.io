@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave5</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: white;
+
+
+        }
+        main {
+            max-width: 970px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #222222;
+
+        }
+
+
+        header{
+            background-color: white;
+            filter: drop-shadow(0 5px 5px black);
+        }
+
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;
+        }
+
+        body > header > nav > a {
+            text-align: center;
+            padding: 15px ;
+            text-decoration: none;
+            color: #222222;
+        }
+
+        @media (max-width: 750px) {
+
+            body > header > nav {
+                grid-auto-flow: row;
+            }
+            h1{
+                text-align: center;
+                font-size: 100px;
+                font-family: Unlock, "Times New Roman";
+                color: white;
+
+
+            }
+            h2{
+                text-align: center;
+                font-size: 15%;
+                font-family: 'Playfair Display SC', sans-serif;
+
+            }
+            i {
+                text-align: center;
+                font-size: 30px;
+                font-family: "Playfair Display SC";
+                position: center;
+
+            }
+        }
+        h3 {
+            font-size: 100%;
+
+        }
+        .wrapper {
+            max-width: 940px;
+            margin: 50px auto;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            text-align: center;
+
+        }
+
+        .wrapper > div {
+            border: 2px solid black(233,171,88);
+            background-color: rgba(233, 171, 88, .5);
+            padding: 50px;
+            color: black;
+            background-color: #eeeeee;
+            text-align: center;
+        }
+
+        .Kategorier  img {
+            width: 100%;
+        }
+
+
+        @media (max-width: 720px) {
+            .wrapper {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        button {
+            position: center;
+        }
+        bilder {
+            position: center;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#">HJEM</a>
+        <a href="#">MILJØPARTIET</a>
+        <a href="#">SENTERPARTIET</a>
+
+    </nav>
+</header>
+
+<main>
+    <div class="wrapper">
+
+        <div class="one">
+            <img src="bilder/miljopartiet.png"  >
+            <a href="#"></a>
+        </div>
+
+        <div class="two">
+            <img src="bilder/sp.png"  >
+            <a href="#"></a>
+        </div>
+
+    </div>
+
+
+</main>
+
+<img id="bilder" src="bilder/mdg001.jpg" width="600">
+
+<button id="forrige">Forrige</button>
+<button id="neste">Neste</button>
+
+<button id="random">Tilfeldig bilde</button>
+
+
+<script>
+
+    const neste = document.getElementById("neste");
+    const forrige = document.getElementById("forrige");
+    const random = document.getElementById("random");
+
+    const bilder = document.getElementById("bilder");
+
+
+    let bildeListe = ["bilder/mdg001.jpg", "bilder/sp01.jpg", "bilder/mdg02.jpg", "bilder/sp02.jpg", "bilder/mdg03.jpg", "bilder/sp03.jpg"]; //En liste med bilder
+
+    random.onclick = function(){
+        let n = Math.floor(Math.random()*bildeListe.length) // Setter n til å være et tilfeldig heltall mellom 0 og lengden på bildelisten minus 1.
+        bilder.src = bildeListe[n]; // Bytter bilde til bilde med indeks n
+    }
+
+    let n = 0; // lager en global variabel som har kontroll på hvilket bilde som vises
+
+    neste.onclick = function(){
+        n++; // plusser 1 på n
+        if (n >= bildeListe.length){ //Hvis n er større eller lik lengden på bildelisten gjør følgende:
+            n = 0; //sett n til 0, slik at det første bilde vises igjen.
+        }
+        bilder.src = bildeListe[n]; //bytter bilde til bilde med indeks n
+    }
+    forrige.onclick = function(){
+        n--; // trekker 1 fra n
+        if (n<0){
+            n = bildeListe.length - 1 // Hvis n er mindre enn null sett n til det siste elementet som er lengden på listen minus 1
+        }
+        bilder.src = bildeListe[n]; //bytter bilde til bilde med indeks n
+    }
+
+
+    //Planen var at når man trykket på de to bildene øvsert ville det komme opp tekst, men det klarte jeg ikke. også ønsket jeg at knappene skulle være under bildet.
+
+</script>
+
+</body>
+</html>

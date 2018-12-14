@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Oppgave3</title>
+</head>
+<body>
+
+<h1>Hvor mye koster varen?</h1>
+
+<input type="number" id="inpTall">
+<span id="spnResultat"></span>
+<br>
+<button id="btnRegnUt">Regn Ut</button>
+
+
+<script>
+    var inpTall = document.getElementById("inpTall");
+    var spnResultat = document.getElementById("spnResultat");
+    var btnRegnUt = document.getElementById("btnRegnUt");
+
+    inpTall.onkeyup = function(){
+        spnResultat.innerHTML = 1.25 * Number(inpTall.value);
+
+    var tall = 350;
+    if(tall > 350){
+
+         document.write("Over 350 blir det moms");
+
+    }else if (tall <350){
+            document.write("Under 350 er det uten moms");
+        }
+    }
+
+    // Ville prøve at if setningene skulle skrive ut på nettsiden, men når jeg setter på det fungerer ikke spnResultater
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Oppgave4</title>
+</head>
+<body>
+<label for="alder"></label>
+<input id="alder" type="number" name="" value="">
+
+<button>Tilfeldig</button>
+
+
+<img  id="imgUng">
+<img id="imgGammel">
+<img  id="imgPasse">
+<script>
+    const alder = Math.floor(Math.random()*70); // En alert-boks hvor brukeren kan skrive inn sin alder, som er konvertert til datatypen number.
+
+    const imgUng = document.getElementById("imgUng");
+    const imgGammel = document.getElementById("imgGammel");
+    const imgPasse = document.getElementById("imgPasse");
+            if(alder.value < 15){
+                document.write("Du er for ung");
+                imgUng.src = "bilder/ung.jpg";
+
+            }
+            else if (alder.value < 60) {
+                document.write("Beklager, du er for gammel");
+                imgGammel.src = "bilder/gammel.jpg";
+            }
+
+            // får ikke Math.Random til å lage tilfeldige tallj
+
+
+
+</script>
+</body>
+</html>
