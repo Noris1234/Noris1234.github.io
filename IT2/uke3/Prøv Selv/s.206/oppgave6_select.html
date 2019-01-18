@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Select</title>
+</head>
+<body>
+<h1>Legger til verdier i et tomt array fra et select-element</h1>
+
+<select id="veldFarge">
+    <option>Grå</option>
+    <option>Blå</option>
+    <option>Rosa</option>
+    <option>Grønn</option>
+</select>
+
+<button id="btn">Velg Farge</button>
+<p id="txtVis"></p>
+
+<script>
+
+    let velgFarge = document.getElementById("velgFarge");
+    let btn = document.getElementById("btn");
+    let txtVis = document.getElementById("txtVis");
+    let sko = [];
+    btn.onclick = function () {
+        sko.push(velgFarge.value);
+        txtVis.innerHTML = "Du har valgt fargene:" + sko.join(",");
+    };
+</script>
+
+</body>
+</html>

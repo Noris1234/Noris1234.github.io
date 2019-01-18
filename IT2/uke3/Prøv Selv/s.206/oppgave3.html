@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Feriebilder</title>
+</head>
+<body>
+
+<button id="btnFram">Fram</button>
+<button id="btnTilbake">Tilbkae</button>
+<img id="imgBilder">
+
+<script>
+
+    let btnFram = document.getElementById("btnFram");
+    let btnTilbake = document.getElementById("btnTilbake");
+    let imgBilder = document.getElementById("imgBilder");
+    let bilder = ["bilde1.jpg", "bilde2.jpg", "bilde3.jpg", "bilde4.jpg"]; //array med bildefiler
+    let i = 0; //telleren starter på null
+
+    //oppgave 4
+    bilder.sort(); //sorterer navnene alfabetisk
+    bilder.sort(function(a,b) { // sorterer stigene rekkefølge
+        return a - b
+    });
+
+imgBilder.src = bilder[i]; //viser det første bilde i arrayt
+
+    btnFram.onclick = function () { //hendelsesstyrt funksjon
+        i++; //øker telleren med 1
+        console.log(i);
+
+        if (i === bilder.length){
+            console.log("if");
+            i = 0;
+        }
+        console.log(i);
+        imgBilder.src = bilder[i];
+    };
+    
+    btnTilbake.onclick = function () {
+        i--; //går tilbake telleren med 1
+
+        if (i < 0) {
+            i = bilder.length -1;
+        }
+         imgBilder.src = bilder[i];
+    };
+
+
+</script>
+</body>
+</html>

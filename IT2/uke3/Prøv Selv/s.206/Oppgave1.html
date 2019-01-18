@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Handleliste</title>
+</head>
+<body>
+
+<ol id="handleListe"></ol>
+
+<script>
+
+    let handleListe = document.getElementById("handleListe");
+    let matVarer = ["Ost", "Paprika", "Brød", "Kaviar"]; // oppgave A og lager handleliste
+
+    matVarer.unshift("Melk"); //oppgave B og legger til melk
+
+    matVarer.pop(); //oppgave C ogfjerner siste element
+
+    matVarer[3]="Knekkebrød"; //oppgave D og bytter matvare
+
+
+    for (let Varer of matVarer) { //lager liste til matvarene
+        handleListe.innerHTML += "<li>" + Varer +"</li>";
+    }
+
+
+
+</script>
+
+</body>
+</html>

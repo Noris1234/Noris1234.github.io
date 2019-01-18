@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>verdier</title>
+</head>
+<body>
+<h1>Legger til verider i et tomt array fra et input-element</h1>
+
+<input type="text" id="inpNavn">
+<button id="btn">Sett inn</button>
+<p id="txtElever"></p>
+
+<script>
+
+    let inpNavn = document.getElementById("inpNavn");
+    let btn = document.getElementById("btn");
+    let txtElever = document.getElementById("txtElever");
+
+    let elever = [];
+    btn.onclick = function () {
+        elever.push(inpNavn.value); //hendelsestyrt funksjon
+        txtElever.innerHTML = elever.join("<br>"); //sammenhengende tekst
+    };
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Trær</title>
+</head>
+<body>
+
+<ol id="listeTrer"></ol>
+
+<script>
+
+    let listeTrer = document.getElementById("listeTrer");
+    let trer = ["Lønn", "Hassel", "Bjørk", "Eik", "Blodlønn", "Furu", "Gran"];
+
+     trer.splice(3,1); //oppgave A, tar bort Eik
+
+     trer[2]="Hengebjørk"; //oppgave B, tar bort bjørk og bytter ut med Hengebjørk
+
+     trer.splice(4,2, "Fjellbjørk", "Dvergbjørk"); //oppgave C, fjerner furu og gran, oppgave D legger til fjellbjørk og dvergbjørk
+
+    trer.sort(); //oppgave E, sorterer trerene
+
+    for (let lsite of trer) { //lager liste til matvarene
+        listeTrer.innerHTML += "<li>" + lsite +"</li>";
+    }
+
+
+
+</script>
+
+</body>
+</html>
